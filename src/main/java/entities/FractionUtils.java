@@ -7,7 +7,6 @@ public class FractionUtils {
             b = a % b;
             a = temp;
         }
-
         return a;
     }
 
