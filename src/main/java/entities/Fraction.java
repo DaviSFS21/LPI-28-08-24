@@ -4,8 +4,20 @@ public class Fraction {
     public int num, den;
 
     public Fraction(int num, int den) {
-        this.num = num;
-        this.den = den;
+        if (num >= 0 && den > 0) {
+            this.num = num;
+            this.den = den;
+        } else {
+            if (num < 0 && den < 0) {
+                this.num = Math.abs(num);
+                this.den = Math.abs(den);
+            } else {
+                if (num < 0 || den < 0) {
+                    this.num = num * -1;
+                    this.den = Math.abs(den);
+                }
+            }
+        }
     }
 
     public Fraction() {
